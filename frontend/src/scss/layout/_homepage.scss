@@ -2,7 +2,12 @@
     &__container{
         margin-top: 140px;
         margin-bottom: 200px;
+        display: flex;
+        justify-content: space-between;
+   
     }
+
+   
 
     &__text{
         display: flex;
@@ -38,5 +43,21 @@
         font-size: 24px;
         line-height: 30px;
         color: $black-main;
+    }
+}
+
+
+.apply{
+
+
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+
+        &-card{
+            display: flex;
+            flex-direction: column;
+           
+        }
     }
 }
