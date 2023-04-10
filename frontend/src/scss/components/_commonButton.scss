@@ -1,0 +1,38 @@
+.common__button{
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 10px;
+    background: #4482E9;
+    border-radius: 80px;
+    border: none;
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+
+    &:hover{
+        background: #22385C;
+    }
+
+    &--disabled{
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 40px;
+        gap: 10px;
+        background: #EAEAEA;
+        border-radius: 80px;
+        border: none;
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: #C2C2C2;
+    
+    }
+}

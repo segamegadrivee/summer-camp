@@ -32,15 +32,19 @@ const Footer = () => {
 
                 <div className="footer__social">
                     <div className="footer__social-links">
-                        <span>Follow us</span>
+                        <span className='footer__maplink'>Follow us</span>
                         <a href="https://www.facebook.com/" target='_blank'><img src={facebook} alt="" /></a>
                         <a href="https://www.instagram.com/" target='_blank'><img src={instagram} alt="" /></a>
                     </div>
 
-                    <a className='footer__title' href="">About</a>
-                    <a className='footer__title' href="">For Parents</a>
-                    <a className='footer__title' href="">Volunteer work</a>
+                    <a className='footer__title' href="#">About</a>
+                    <a className='footer__title' href="#">For Parents</a>
+                    <a className='footer__title' href="#">Volunteer work</a>
+
+                    {/* <button className='common__button'>Register</button> */}
                 </div>
+
+
             </div>
 
         </footer>
