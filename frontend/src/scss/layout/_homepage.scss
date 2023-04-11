@@ -47,8 +47,65 @@
 }
 
 
-.apply{
+// .apply{
     
+//     &__title{
+//         font-family: 'Lato';
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 32px;
+//         line-height: 34px;
+//         color: $black-main;
+//     }
+
+//     &__container{
+//         margin-bottom: 160px;
+//     }
+
+//     &__cards{
+//         display: flex;
+//         justify-content: space-between ; 
+//         gap: 40px;
+
+//         &-card{
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+           
+//         }
+//     }
+
+//    &__header{
+//         text-align: center;
+//    }
+   
+// }
+
+// .card{
+  
+//     &__title {
+//         font-family: 'Itim';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 28px;
+//         line-height: 34px;
+//         color: $black-main;
+//     }
+
+//     &__description {
+//         padding-top: 16px;
+//         font-family: 'Readex Pro';
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 18px;
+//         line-height: 22px;
+//         color: $grey-text;
+//     }
+// }
+
+
+.apply{
+
     &__title{
         font-family: 'Lato';
         font-style: normal;
@@ -58,32 +115,31 @@
         color: $black-main;
     }
 
+
     &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 58px;
         margin-bottom: 160px;
     }
 
     &__cards{
         display: flex;
-        justify-content: space-between ; 
-        gap: 40px;
-
-        &-card{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           
-        }
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 100px;
     }
-
-   &__header{
-        text-align: center;
-   }
-   
 }
 
 .card{
-  
-    &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__title{
         font-family: 'Itim';
         font-style: normal;
         font-weight: 400;
@@ -92,13 +148,14 @@
         color: $black-main;
     }
 
-    &__description {
+    &__subtitle{
         padding-top: 16px;
+        max-width: 387px;
         font-family: 'Readex Pro';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-        color: $grey-text;
+        color:$grey-text;
     }
 }

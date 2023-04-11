@@ -29,36 +29,43 @@ let HomePage = () => {
 
             <section className='apply'>
                 <div className="apply__container container">
-                    <div className="apply__content">
-                        <div className="apply__header">
-                            <h2 className='apply__title'>How to aply?</h2>
-                        </div>
-
-
-                        <div className="apply__cards">
-
-                            <div className="apply__cards-card">
-                                <img className='card__icon' src={paper} alt="img" />
-                                <p className='card__title'>Read the Behavioral Guideline </p>
-                                <p className='card__description'>Reviewed by both parent and child. You do <br /> neet to sign and submit after confirmation <br /> of registration this Behavior Guidelines here </p>
-                            </div>
-
-                            <div className="apply__cards-card">
-                                <img className='card__icon' src={click} alt="img" />
-                                <p className='card__title'>Complete online registration form </p>
-                                <p className='card__description'>Complete the online registration form,<br /> providing all necessary information Register <br /> here</p>
-                            </div>
-
-                            <div className="apply__cards-card">
-                                <img className='card__icon' src={like} alt="img" />
-                                <p className='card__title'>Confirmation  </p>
-                                <p className='card__description'>Wait for the camp to contact you and <br /> confirm your child's registration </p>
-                            </div>
-
-                        </div>
+                    <div className="">
+                        <h1 className='apply__title'>How to apply ?</h1>
                     </div>
+                    <div className="apply__cards">
+                        <div className="card">
+                            <img src={paper} alt="img" />
+                            <div className="card__text">
+                                <p className='card__title'>Read the Behavioral Guideline </p>
+                                <p className='card__subtitle'>Reviewed by both parent and child. You do neet to sign and submit after confirmation of registration this Behavior <a href="#">Guidelines here </a> </p>
+                            </div>
+                        </div>
+
+                        <div className="card">
+                            <img src={click} alt="img" />
+                            <div className="card__text">
+                                <p className='card__title'>Complete online registration form </p>
+                                <p className='card__subtitle'>Complete the online registration form, providing all necessary information <a href="#">Register here</a>  </p>
+                            </div>
+                        </div>
+
+
+                        <div className="card">
+                            <img src={like} alt="img" />
+                            <div className="card__text">
+                                <p className='card__title'>Confirmation  </p>
+                                <p className='card__subtitle'>Wait for the camp to contact you and confirm your child's registration</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </section >
+
+
+
+
+            </section>
 
         </div >
     )
