@@ -18,6 +18,10 @@
         background: #22385C;
     }
 
+    // &:focus{
+    //     border: 2px solid #9EBFF5;
+    // }
+
     &--disabled{
         transition: 0.1s ease-in-out;
         cursor: pointer;

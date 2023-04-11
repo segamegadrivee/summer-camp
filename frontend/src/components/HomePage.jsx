@@ -1,8 +1,8 @@
 import church from '../assets/church.svg';
 import kids from '../assets/hero.png';
-import paper from '../assets/Flying-Paper.png';
-import click from '../assets/Finger-Click.png';
-import like from '../assets/Thumb-Up.png';
+import paper from '../assets/Flying-Paper.svg';
+import click from '../assets/Finger-Click.svg';
+import like from '../assets/Thumb-Up.svg';
 
 let HomePage = () => {
     return (
@@ -30,24 +30,30 @@ let HomePage = () => {
             <section className='apply'>
                 <div className="apply__container container">
                     <div className="apply__content">
-                        <h2 className='apply__title'>How to aply?</h2>
+                        <div className="apply__header">
+                            <h2 className='apply__title'>How to aply?</h2>
+                        </div>
+
+
                         <div className="apply__cards">
+
                             <div className="apply__cards-card">
-                                <img src={paper} alt="img" />
+                                <img className='card__icon' src={paper} alt="img" />
                                 <p className='card__title'>Read the Behavioral Guideline </p>
                                 <p className='card__description'>Reviewed by both parent and child. You do <br /> neet to sign and submit after confirmation <br /> of registration this Behavior Guidelines here </p>
                             </div>
+
                             <div className="apply__cards-card">
-                                <img src={click} alt="img" />
+                                <img className='card__icon' src={click} alt="img" />
                                 <p className='card__title'>Complete online registration form </p>
                                 <p className='card__description'>Complete the online registration form,<br /> providing all necessary information Register <br /> here</p>
                             </div>
+
                             <div className="apply__cards-card">
-                                <img src={like} alt="img" />
+                                <img className='card__icon' src={like} alt="img" />
                                 <p className='card__title'>Confirmation  </p>
                                 <p className='card__description'>Wait for the camp to contact you and <br /> confirm your child's registration </p>
                             </div>
-
 
                         </div>
                     </div>
