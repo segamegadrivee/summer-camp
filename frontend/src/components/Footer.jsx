@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                     <div className="footer__contact-email">
                         <span className='footer__title'>Contact e-mail</span>
-                        <a className='footer__text' href="mailto:summercapm@gmail.com">summercapm@gmail.com</a>
+                        <a className='footer__text' href="mailto:camp@abvmcalgary.com">camp@abvmcalgary.com</a>
                     </div>
                 </div>
 
