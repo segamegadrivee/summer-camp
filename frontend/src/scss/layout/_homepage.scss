@@ -54,62 +54,6 @@
 }
 
 
-// .apply{
-    
-//     &__title{
-//         font-family: 'Lato';
-//         font-style: normal;
-//         font-weight: 500;
-//         font-size: 32px;
-//         line-height: 34px;
-//         color: $black-main;
-//     }
-
-//     &__container{
-//         margin-bottom: 160px;
-//     }
-
-//     &__cards{
-//         display: flex;
-//         justify-content: space-between ; 
-//         gap: 40px;
-
-//         &-card{
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-           
-//         }
-//     }
-
-//    &__header{
-//         text-align: center;
-//    }
-   
-// }
-
-// .card{
-  
-//     &__title {
-//         font-family: 'Itim';
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 28px;
-//         line-height: 34px;
-//         color: $black-main;
-//     }
-
-//     &__description {
-//         padding-top: 16px;
-//         font-family: 'Readex Pro';
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 18px;
-//         line-height: 22px;
-//         color: $grey-text;
-//     }
-// }
-
 
 .apply{
 
@@ -171,5 +115,86 @@
         font-size: 18px;
         line-height: 22px;
         color:$grey-text;
+    }
+}
+
+
+
+.experience{
+    &__container{
+        margin-bottom: 120px;
+    }
+
+   &__title{
+        text-align: center;
+        padding-bottom: 80px;
+   }
+    
+    &__main{
+        display: flex;
+        justify-content: end;
+    }
+
+    
+    &__title{
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 34px;
+        color: $black-main;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        max-width: 600px;
+    }
+
+    &__text-header{
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: $black-main;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 9px;
+    }
+}
+
+.item{
+    &__title{
+        font-family: 'Itim';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        color: $black-main;
+    }
+
+    &__text{
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color:$grey-text ;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }

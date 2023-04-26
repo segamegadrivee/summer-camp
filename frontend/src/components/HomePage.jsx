@@ -4,6 +4,7 @@ import paper from '../assets/Flying-Paper.svg';
 import click from '../assets/Finger-Click.svg';
 import like from '../assets/Thumb-Up.svg';
 import hero from '../assets/main-picture.png';
+import hero2 from '../assets/main-picture2.png';
 import sign from '../assets/sign-exp.svg';
 
 let HomePage = () => {
@@ -75,20 +76,49 @@ let HomePage = () => {
             <section>
                 <div className="experience__container container">
                     <h2 className='experience__title'>Experience the joy of summer with friends and faith</h2>
-                    <div className="experience__text">
-                        <p className='experience__text-header'>At Summer Camp, children aged 7 years and above will have an exciting and
-                            unforgettable summer experience filled with adventure, learning and make friends</p>
+                    <div className='experience__main'>
+                        <div className="experience__text">
+                            <p className='experience__text-header'>At Summer Camp, children aged 7 years and above will have an exciting and
+                                unforgettable summer experience filled with adventure, learning and make friends</p>
 
-                        <div className="experience__text-main">
+                            <div className="experience__text-main">
 
-                            <div className="experience__item">
-                                <img src={sign} alt="exp" />
-                                <p className='item__title'>Outdoor Activities</p>
-                                <p className='item__text'>The camp offers various outdoor activities such as hiking and team-building exercises.
-                                    The children will enjoy exploring nature while building their physical skills and teamwork abilities.</p>
+                                <div className="experience__item">
+                                    <img src={sign} alt="exp" />
+                                    <div className="item__content">
+                                        <p className='item__title'>Outdoor Activities</p>
+                                        <p className='item__text'>The camp offers various outdoor activities such as hiking and team-building exercises.
+                                            The children will enjoy exploring nature while building their physical skills and teamwork abilities.</p>
+                                    </div>
+                                </div>
+
+                                <div className="experience__item">
+                                    <img src={sign} alt="exp" />
+                                    <div className="item__content">
+                                        <p className='item__title'>Arts and Crafts</p>
+                                        <p className='item__text'>Campers will have the chance to explore their creative side through various arts and crafts projects.
+                                            They will make friendship bracelets, paint and draw, and create beautiful memories.</p>
+                                    </div>
+                                </div>
+
+                                <div className="experience__item">
+                                    <img src={sign} alt="exp" />
+                                    <div className="item__content">
+                                        <p className='item__title'>Games</p>
+                                        <p className='item__text'>Camp offers a variety of games
+                                            that children will enjoy playing. From sports to board games, there is something for everyone.</p>
+                                    </div>
+                                </div>
+
+                                <div className="experience__item">
+                                    <img src={sign} alt="exp" />
+                                    <div className="item__content">
+                                        <p className='item__title'>Music and Dance </p>
+                                        <p className='item__text'>Kids will have fun while learning how to move their bodies in rhythm.</p>
+                                    </div>
+                                </div>
+
                             </div>
-
-
                         </div>
                     </div>
 
