@@ -1,11 +1,11 @@
 import church from '../assets/church.svg';
-import kids from '../assets/hero.png';
 import paper from '../assets/Flying-Paper.svg';
 import click from '../assets/Finger-Click.svg';
 import like from '../assets/Thumb-Up.svg';
 import hero from '../assets/main-picture.png';
 import hero2 from '../assets/main-picture2.png';
 import sign from '../assets/sign-exp.svg';
+import experience from '../assets/experience.png';
 
 let HomePage = () => {
     return (
@@ -77,6 +77,7 @@ let HomePage = () => {
                 <div className="experience__container container">
                     <h2 className='experience__title'>Experience the joy of summer with friends and faith</h2>
                     <div className='experience__main'>
+                        <img className='experience__img' src={experience} alt="exp-img" />
                         <div className="experience__text">
                             <p className='experience__text-header'>At Summer Camp, children aged 7 years and above will have an exciting and
                                 unforgettable summer experience filled with adventure, learning and make friends</p>
@@ -121,6 +122,15 @@ let HomePage = () => {
                             </div>
                         </div>
                     </div>
+
+                </div>
+            </section>
+
+
+
+            <section>
+                <div className="photo__container container">
+
 
                 </div>
             </section>

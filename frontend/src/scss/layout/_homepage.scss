@@ -121,6 +121,12 @@
 
 
 .experience{
+
+    &__img{
+        position: absolute;
+        left: -12%;
+    }
+
     &__container{
         margin-bottom: 120px;
     }
@@ -133,6 +139,7 @@
     &__main{
         display: flex;
         justify-content: end;
+        position: relative;
     }
 
     
@@ -151,6 +158,13 @@
         align-items: center;
         gap: 48px;
         max-width: 600px;
+    }
+
+    &__text-main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
     }
 
     &__text-header{
