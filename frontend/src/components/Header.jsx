@@ -1,10 +1,13 @@
 import logo from '../assets/Logo1.svg';
+import burger from '../assets/burger-menu.svg';
+
 
 const Header = () => {
     return (
         <header>
             <div className="header__container container">
-                <img src={logo} alt="logo" />
+
+                <img className='header__logo' src={logo} alt="logo" />
 
                 <nav>
                     <ul className='header__nav'>
@@ -17,6 +20,7 @@ const Header = () => {
 
                 <span className='header__language'>EN</span>
 
+                <img className='header__menu' src={burger} alt="menu" />
             </div>
         </header>
     )
