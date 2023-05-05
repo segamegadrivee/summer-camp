@@ -6,6 +6,14 @@ import hero from '../assets/main-picture.png';
 import hero2 from '../assets/main-picture2.png';
 import sign from '../assets/sign-exp.svg';
 import experience from '../assets/experience.png';
+import slider1 from '../assets/slider/1264.png';
+import slider2 from '../assets/slider/711.png';
+import slider3 from '../assets/slider/937.png';
+import slider4 from '../assets/slider/2022.png';
+import slider5 from '../assets/slider/938.png';
+import slider6 from '../assets/slider/940.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 let HomePage = () => {
     return (
@@ -128,10 +136,38 @@ let HomePage = () => {
 
 
 
-            <section>
+            <section className='photo'>
                 <div className="photo__container container">
-
-
+                    <h2 className='photo__title'>Photo reports</h2>
+                    <div className="photo__swiper">
+                        <Swiper
+                            spaceBetween={30}
+                            slidesPerView={3}
+                            autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            loop={true}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 40,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 50,
+                                },
+                            }}
+                        >
+                            <SwiperSlide><img src={slider1} alt="slider" /></SwiperSlide>
+                            <SwiperSlide><img src={slider2} alt="slider" /></SwiperSlide>
+                            <SwiperSlide><img src={slider3} alt="slider" /></SwiperSlide>
+                            <SwiperSlide><img src={slider4} alt="slider" /></SwiperSlide>
+                            <SwiperSlide><img src={slider5} alt="slider" /></SwiperSlide>
+                            <SwiperSlide><img src={slider6} alt="slider" /></SwiperSlide>
+                        </Swiper>
+                    </div>
                 </div>
             </section>
         </div >
