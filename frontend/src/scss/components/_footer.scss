@@ -32,9 +32,13 @@
     &__container{
         display: flex;
         justify-content: space-between;
-        padding-bottom: 40px;
         flex-wrap: wrap;
+        padding-bottom: 40px;
+        gap: 64px;
 
+        @media screen and (max-width: 425px) {
+            flex-direction: column;
+        }
         
         a {
             &:hover {
@@ -90,8 +94,3 @@
 
 
 
-footer {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
