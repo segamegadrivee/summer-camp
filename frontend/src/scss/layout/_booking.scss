@@ -5,6 +5,10 @@
     &__container{
         margin-top: 88px;
         margin-bottom: 175px;
+        @media screen and (max-width: 768px) {
+            margin-top: 60px;
+            margin-bottom: 88px;
+        }
     }
 
     &__title{
@@ -29,6 +33,9 @@
         align-items: center;
         padding: 0px;
         gap: 136px;
+        @media screen and (max-width: 768px) {
+            gap: 32px;
+        }
     }
 
     &__card{
@@ -39,6 +46,10 @@
         gap: 48px;
         background: #DBEBF8;
         border-radius: 50px;
+
+        @media screen and (max-width: 768px) {
+            gap: 37px;
+        }
     }
 
 
