@@ -5,6 +5,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        ul li a {
+            color: #000;
+           }
+           
+           ul li a:hover {
+            color: $blue-main;
+           }
+           
+           ul li a.active {
+            color: $blue-main;
+           }
     }
 
    &__nav {

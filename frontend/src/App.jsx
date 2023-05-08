@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import './App.scss';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,9 +11,14 @@ const App = () => {
     return (
         <div className="App">
             <Header />
-            {/* <HomePage /> */}
-            {/* <Booking /> */}
-            <Contacts />
+
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/camps" element={<Booking />} />
+                <Route path="/contact" element={<Contacts />} />
+            </Routes>
+
+
             <Footer />
         </div>
     )

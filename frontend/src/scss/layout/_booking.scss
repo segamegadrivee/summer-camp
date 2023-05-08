@@ -13,7 +13,7 @@
 
     &__title{
         text-align: center;
-        padding-bottom: 48px;
+        padding-bottom: 68px;
     }
 
     &__row{
@@ -46,6 +46,12 @@
         gap: 48px;
         background: #DBEBF8;
         border-radius: 50px;
+        transition: 0.2s ease-in-out ;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
 
         @media screen and (max-width: 768px) {
             gap: 37px;

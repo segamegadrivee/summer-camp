@@ -1,5 +1,6 @@
 import logo from '../assets/Logo1.svg';
 import burger from '../assets/burger-menu.svg';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = () => {
@@ -11,11 +12,11 @@ const Header = () => {
 
                 <nav>
                     <ul className='header__nav'>
-                        <li><a className='header__nav-item' href="#">Home</a></li>
-                        <li><a className='header__nav-item' href="#">About</a></li>
-                        <li><a className='header__nav-item' href="#">For Parents</a></li>
-                        <li><a className='header__nav-item' href="#">Contact</a></li>
-                        <li><a className='header__nav-item' href="#">Camps</a></li>
+                        <li><NavLink className='header__nav-item' to={'/'}>Home</NavLink></li>
+                        <li><NavLink className='header__nav-item' to={'/about'}>About</NavLink></li>
+                        <li><NavLink className='header__nav-item' to={'/parents'}>For Parents</NavLink></li>
+                        <li><NavLink className='header__nav-item' to={'/contact'} >Contact</NavLink></li>
+                        <li><NavLink className='header__nav-item' to={'/camps'}>Camps</NavLink></li>
                     </ul>
                 </nav>
 
