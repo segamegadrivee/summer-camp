@@ -25,8 +25,20 @@ const ForParents = () => {
                     <li>Sentimental or valuable personal items should be left at home, please.</li>
                     <li>It is important that all campers respect the premises of the day camp. Parents are asked to help in tidying-up the activity room at the end of each day.</li>
                 </ul>
+
+                <p style={{ marginTop: '35px' }}>After the Day Program, follow up and encourage your child to share the day&#039;s activities with you, as well as any take-home items!</p>
+                <div style={{ marginTop: '35px' }}>
+                    <b>Safety First!</b>
+                    <ul>
+                        <li>All leaders, counsellors and volunteers will have a current Police Check for the Parish and complete a Safe Environment training session.</li>
+                        <li>The front door will remain locked during indoor activities. No participant leaves the premises without permission and signing out. Ring doorbell for access.</li>
+                        <li>A Buddy system is used with children. No one leaves an activity alone, including to the bathroom. Volunteers are also asked to avoid being alone in a room with a child. Take another volunteer with you.</li>
+                        <li>Children are not allowed into the kitchen. Exceptions are if they are accompanied by volunteer for First Aid treatment, or on the request of kitchen personnel.</li>
+                        <li>Adult leaders should avoid the use of their cell phones, if at all possible &#040;set them to vibrate mode&#041;. All attention and focus are on providing a fun, safe and educational program for the participants</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

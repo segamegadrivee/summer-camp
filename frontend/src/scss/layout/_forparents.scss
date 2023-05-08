@@ -2,13 +2,15 @@
 
     &__title{
         text-align: center;
+        margin-top: 80px;
+        margin-bottom: 64px ;
+        @media screen and (max-width: 768px) {
+            margin-top: 64px;
+            margin-bottom: 40px;
+        }
     }
     
-    &__container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    
 
     &__text{
         max-width: 700px;
@@ -16,12 +18,21 @@
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 30px;
         letter-spacing: 0.01em;
+        margin-bottom: 80px;
         color: $black-main;
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
                 
         ul {
             list-style-type: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           
         }
 
     }
