@@ -9,6 +9,8 @@
             margin-top: 60px;
             margin-bottom: 88px;
         }
+        animation-name: opacityanim;
+        animation-duration: 2s;
     }
 
     &__title{
@@ -47,6 +49,7 @@
         background: #DBEBF8;
         border-radius: 50px;
         transition: 0.2s ease-in-out ;
+        
 
         &:hover{
             transform: scale(1.1);
@@ -89,3 +92,5 @@
     }
    
 }
+
+
