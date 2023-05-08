@@ -14,10 +14,10 @@ const App = () => {
             <Header />
 
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                {/* <Route path="/" element={<HomePage />} /> */}
                 <Route path="/camps" element={<Booking />} />
                 <Route path="/contact" element={<Contacts />} />
-                <Route path="/parents" element={<ForParents />} />
+                <Route path="/" element={<ForParents />} />
             </Routes>
 
 
