@@ -14,6 +14,7 @@ import slider5 from '../assets/slider/938.png';
 import slider6 from '../assets/slider/940.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 
 let HomePage = () => {
     return (
@@ -30,7 +31,7 @@ let HomePage = () => {
                             <br /> Greek-Catholic Church, Calgary</p>
 
                         <div className="hero__register">
-                            <button className="common__button">Register</button>
+                            <button className="common__button"><Link className='common__button-link' to="/camps">Register</Link></button>
                         </div>
 
                     </div>
