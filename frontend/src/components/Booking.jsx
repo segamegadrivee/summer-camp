@@ -1,6 +1,7 @@
 import bookingItem from '../assets/booking-item.svg';
 import { Link } from 'react-router-dom';
 
+
 let Booking = () => {
     return (
         <div className="booking__container container">
