@@ -7,6 +7,12 @@
         display: flex;
         justify-content: space-between;
         position: relative;
+        @media screen and (max-width: 1420px) {
+            position: static;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
    &__img{
@@ -14,7 +20,13 @@
         bottom:-60px;
         right:-10%;
         padding-left: 60px;
+        max-width: 902px;
+
+        @media screen and (max-width: 1420px) {
+           position: static;
+        }
    }
+
 
     &__text{
         display: flex;
@@ -78,6 +90,8 @@
     &__cards{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: flex-start;
         padding: 0px;
         gap: 40px;

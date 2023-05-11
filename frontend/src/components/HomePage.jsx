@@ -35,8 +35,8 @@ let HomePage = () => {
                         </div>
 
                     </div>
-
                     <img className='hero__img' src={hero} alt="hero-img" />
+                    {/* <img src={hero2} alt="" /> */}
 
                 </div>
             </section>
