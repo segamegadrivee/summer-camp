@@ -7,6 +7,7 @@ import HomePage from "./components/HomePage";
 import Booking from "./components/Booking";
 import Contacts from "./components/Contacts";
 import ForParents from "./components/ForParents";
+import VFT from "./components/forms/VFT";
 
 const App = () => {
     return (
@@ -14,10 +15,11 @@ const App = () => {
             <Header />
 
             <Routes>
-                {/* <Route path="/" element={<HomePage />} /> */}
+                <Route path="/" element={<HomePage />} />
                 <Route path="/camps" element={<Booking />} />
+                <Route path="/camps/vacation-fun-tabir" element={<VFT />} />
                 <Route path="/contact" element={<Contacts />} />
-                <Route path="/" element={<ForParents />} />
+                <Route path="/parents" element={<ForParents />} />
             </Routes>
 
 

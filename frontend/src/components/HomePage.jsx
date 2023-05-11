@@ -31,7 +31,7 @@ let HomePage = () => {
                             <br /> Greek-Catholic Church, Calgary</p>
 
                         <div className="hero__register">
-                            <button className="common__button"><Link className='common__button-link' to="/camps">Register</Link></button>
+                            <Link to="/camps"><button className="common__button">Register</button></Link>
                         </div>
 
                     </div>

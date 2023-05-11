@@ -1,4 +1,5 @@
 import bookingItem from '../assets/booking-item.svg';
+import { Link } from 'react-router-dom';
 
 let Booking = () => {
     return (
@@ -30,7 +31,7 @@ let Booking = () => {
 
                         </div>
 
-                        <button className="booking__button common__button">Book</button>
+                        <Link to={'/camps/vacation-fun-tabir'}><button className="booking__button common__button">Book</button></Link>
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@ import logo from '../assets/Logo1.svg';
 import facebook from '../assets/facebook.svg';
 import instagram from '../assets/instagram.svg';
 import telegram from '../assets/telegram.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -21,12 +22,10 @@ const Footer = () => {
 
 
                 <div className="footer__social">
-                    <a className='footer__title' href="#">Home</a>
-                    <a className='footer__title' href="#">About</a>
-                    <a className='footer__title' href="#">For Parents</a>
-                    <a className='footer__title' href="#">Volunteer work</a>
-
-                    {/* <button className='common__button'>Register</button> */}
+                    <Link className='footer__title' to={'/'}>Home</Link>
+                    <Link className='footer__title' to={'/about'}>About</Link>
+                    <Link className='footer__title' to={'/parents'}>For Parents</Link>
+                    <Link className='footer__title' to={'/contact'}>Contact</Link>
                 </div>
 
                 <div className="footer__contact">

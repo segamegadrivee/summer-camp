@@ -2,7 +2,7 @@
 
 const ForParents = () => {
     return (
-        <div className="parennts__container container">
+        <div className="parents__container container">
             <h2 className="parents__title">Information for parents</h2>
             <div className="parents__text">
                 <b>General</b>
