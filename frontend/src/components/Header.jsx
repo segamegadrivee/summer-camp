@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className={`${hamburgerOpen ? 'blur' : ''}`}></div>
+            <div className={`${hamburgerOpen ? 'blur' : ''}`} onClick={() => setHamburgerOpen(false)}></div>
             <div className="header__container container">
 
                 <img className='header__logo' src={logo} alt="logo" />

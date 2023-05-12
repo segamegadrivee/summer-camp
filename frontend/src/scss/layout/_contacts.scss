@@ -1,0 +1,61 @@
+
+.contacts{
+    
+    &__container{
+        margin-top: 100px;
+        margin-bottom: 150px;
+    
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        @media screen and (max-width: 768px) {
+           flex-direction: column;
+           justify-content: center;
+        }
+    }
+
+    &__paragraph{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+
+        a{
+            color: $black-main;
+            font-weight: 600;
+        }
+        &-info{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+        }
+
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 56px;
+        
+        max-width: 600px;
+    }
+}

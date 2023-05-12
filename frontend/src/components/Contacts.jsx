@@ -3,6 +3,7 @@ import call from '../assets/call_contacts.svg';
 import message from '../assets/message_contact.svg';
 
 
+
 let Contacts = () => {
     return (
         <div className="contacts__container container">
@@ -16,7 +17,8 @@ let Contacts = () => {
                             held on the premises of Assumption of the Blessed Virgin Mary Ukrainian Catholic Church</p>
                         <div className="contacts__paragraph-info">
                             <img src={geo} alt="contact" />
-                            <span>704 6 St NE Calgary, Alberta Canada, T2E 3Y7.</span>
+
+                            <b>704 6 St NE Calgary, Alberta Canada, T2E 3Y7.</b>
                         </div>
                     </div>
 
@@ -37,23 +39,29 @@ let Contacts = () => {
                         </div>
                     </div>
 
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5076.927044708215!2d30.47802415983276!3d50.48833035333716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdf2313b56c1%3A0x56bf0f2538c74671!2z0JzQsNCz0LDQt9C40L0g0LrQvtC20Lgg0JDQu9C40LPQviDQk9GA0YPQv9C_!5e0!3m2!1sru!2sua!4v1683407780948!5m2!1sru!2sua"
-
-                        style={{
-                            border: 0,
-                            maxWidth: '600px',
-                            maxHeight: '100%',
-                            width: '100%',
-
-                        }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-
                 </div>
+
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.727655341963!2d-114.05056072293115!3d51.05811637171466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537165500d2dd3ab%3A0x9489d0158d603439!2z0KPQutGA0LDRl9C90YHRjNC60LAg0JPRgNC10LrQvi3QmtCw0YLQvtC70LjRhtGM0LrQsCDQn9Cw0YDQsNGE0ZbRjyDQo9GB0L_RltC90L3RjyDQn9GA0LXRgdCy0Y_RgtC-0Zcg0JHQvtCz0L7RgNC-0LTQuNGG0ZY!5e0!3m2!1suk!2sua!4v1683931716848!5m2!1suk!2sua"
+
+
+                    style={{
+                        border: 0,
+                        maxWidth: '600px',
+                        maxHeight: '100%',
+                        width: '100%',
+
+                    }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+
+
+
+
             </div>
         </div >
     )
