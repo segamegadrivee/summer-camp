@@ -70,6 +70,7 @@
 
 
 .blur{
+   
     position: absolute;
     z-index: 998;
     width: 100%;
@@ -78,27 +79,27 @@
     transition: 0.2s ease-in-out;
 
 }
+
+nav{
+    ul li a {
+        color: #000;
+       }
+       
+       ul li a:hover {
+        color: $blue-main;
+       }
+       
+       ul li a.active {
+        color: $blue-main;
+       }
+
+}
+
+
 .burger{
-
+   
     &__menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        gap: 40px;
-        max-width: 140px;
-
-        position: absolute;
-        // right: 4.62%;
-        // left: 59.74%;
-        // top: 10%;
-        // bottom: 55.85%;
         display: none;
-        right:  5%;
-        z-index: 999;
-        background: #f2f2fc;
-        border-radius: 10px;
     }
 
     &__menu--show{
@@ -119,6 +120,7 @@
         z-index: 999;
         background: #f2f2fc;
         border-radius: 10px;
+
     }
     
 }
