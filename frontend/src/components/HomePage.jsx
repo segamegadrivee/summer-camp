@@ -186,7 +186,7 @@ let HomePage = () => {
                                 looking for enthusiastic individuals who want to make a positive impact on the lives of children.</p>
                             <p>As a volunteer, you'll have the opportunity to participate in a variety of activities and help create a safe and fun environment for our campers. Whether
                                 you have experience working with children or not, we welcome volunteers of all backgrounds and skill levels.</p>
-                            <p>To learn more about volunteering at our camp and to apply, please contact us via email at camp@abvmcalgary.com</p>
+                            <p>To learn more about volunteering at our camp and to apply, please contact us via email at <a href="mailto:camp@abvmcalgary.com">camp@abvmcalgary.com</a> </p>
                         </div>
 
                     </div>
