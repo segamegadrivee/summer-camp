@@ -103,6 +103,10 @@
         align-items: center;
         gap: 58px;
         margin-bottom: 160px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 80px;
+         }
+        
     }
 
     &__cards{
@@ -125,18 +129,22 @@
     
     &__img{
         @media screen and (max-width: 768px) {
-           width: 100px;
+           width: 160px;
         }
     }
 
     &__title{
-        
         font-family: 'Itim';
         font-style: normal;
         font-weight: 400;
         font-size: 28px;
         line-height: 34px;
         color: $black-main;
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
     }
 
     &__subtitle{
@@ -152,6 +160,12 @@
         font-size: 18px;
         line-height: 22px;
         color:$grey-text;
+        
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
     }
 }
 
@@ -180,14 +194,7 @@
     }
 
     
-    &__title{
-        font-family: 'Readex Pro';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 34px;
-        color: $black-main;
-    }
+   
 
     &__text{
         display: flex;
@@ -211,6 +218,10 @@
         font-size: 24px;
         line-height: 30px;
         color: $black-main;
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &__item{
@@ -230,6 +241,11 @@
         font-size: 28px;
         line-height: 34px;
         color: $black-main;
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
 
     &__text{
@@ -240,6 +256,11 @@
         line-height: 24px;
         letter-spacing: 0.01em;
         color:$grey-text ;
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     &__content{
