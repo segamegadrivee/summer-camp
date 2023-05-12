@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 let Booking = () => {
+
     return (
         <div className="booking__container container">
             <h2 className="booking__title">Choose your camp</h2>

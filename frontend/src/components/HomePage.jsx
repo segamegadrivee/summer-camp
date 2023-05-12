@@ -17,6 +17,7 @@ import 'swiper/css';
 import { Link } from 'react-router-dom';
 
 let HomePage = () => {
+
     return (
         <div className="homepage__wrapper">
             <section className="hero">
@@ -35,6 +36,7 @@ let HomePage = () => {
                         </div>
 
                     </div>
+
                     <img className='hero__img' src={hero} alt="hero-img" />
                     {/* <img src={hero2} alt="" /> */}
 
@@ -48,7 +50,7 @@ let HomePage = () => {
                     </div>
                     <div className="apply__cards">
                         <div className="card">
-                            <img src={paper} alt="img" />
+                            <img className='card__img' src={paper} alt="img" />
                             <div className="card__text">
                                 <p className='card__title'>Read the General Rules </p>
                                 <p className='card__subtitle'>Reviewed by both parent and child. You do neet to sign and submit after confirmation of registration this Behavior <a href="#">Guidelines here </a> </p>
@@ -56,7 +58,7 @@ let HomePage = () => {
                         </div>
 
                         <div className="card">
-                            <img src={click} alt="img" />
+                            <img className='card__img' src={click} alt="img" />
                             <div className="card__text">
                                 <p className='card__title'>Complete online registration form </p>
                                 <p className='card__subtitle'>Complete the online registration form, providing all necessary information <a href="#">Register here</a>  </p>
@@ -65,7 +67,7 @@ let HomePage = () => {
 
 
                         <div className="card">
-                            <img src={like} alt="img" />
+                            <img className='card__img' src={like} alt="img" />
                             <div className="card__text">
                                 <p className='card__title'>Confirmation  </p>
                                 <p className='card__subtitle'>Wait for the camp to contact you and confirm your child's registration</p>
@@ -86,7 +88,7 @@ let HomePage = () => {
                 <div className="experience__container container">
                     <h2 className='experience__title'>Experience the joy of summer with friends and faith</h2>
                     <div className='experience__main'>
-                        <img className='experience__img' src={experience} alt="exp-img" />
+                        {/* <img className='experience__img' src={experience} alt="exp-img" /> */}
                         <div className="experience__text">
                             <p className='experience__text-header'>At Summer Camp, children aged 7 years and above will have an exciting and
                                 unforgettable summer experience filled with adventure, learning and make friends</p>
@@ -168,6 +170,25 @@ let HomePage = () => {
                             <SwiperSlide><img src={slider5} alt="slider" /></SwiperSlide>
                             <SwiperSlide><img src={slider6} alt="slider" /></SwiperSlide>
                         </Swiper>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div className="volunteer__container container">
+                    <h2 className='volunteer__title'>Volunteer opportunities</h2>
+                    <div className="volunteer__content">
+                        <div className="volunteer__text">
+                            <p className='volunteer__text-title'>Please join our Volunteer Team and share your skills</p>
+
+                            <p>Are you looking for a meaningful way to spend your summer? Consider volunteering at our children's camp! We're
+                                looking for enthusiastic individuals who want to make a positive impact on the lives of children.</p>
+                            <p>As a volunteer, you'll have the opportunity to participate in a variety of activities and help create a safe and fun environment for our campers. Whether
+                                you have experience working with children or not, we welcome volunteers of all backgrounds and skill levels.</p>
+                            <p>To learn more about volunteering at our camp and to apply, please contact us via email at camp@abvmcalgary.com</p>
+                        </div>
+
                     </div>
                 </div>
             </section>
