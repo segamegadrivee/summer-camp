@@ -47,3 +47,98 @@ input {
   padding: 16px 40px;
   max-width: 386px;
 }
+
+
+.control {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 18px;
+	input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		&:checked {
+			& ~ .control__indicator {
+				background: $color--primary;
+				&:after {
+					display: block;
+				}
+			}
+		}
+		&:disabled {
+			& ~ .control__indicator {
+				background: $color--light-grey;
+				opacity: 0.6;
+				pointer-events: none;
+			}
+		}
+	}
+}
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background: $color--light-grey;
+	&:after {
+		content: '';
+		position: absolute;
+		display: none;
+	}
+}
+.control--radio {
+	.control__indicator {
+		border-radius: 50%;
+		&:after {
+			left: 7px;
+			top: 7px;
+			height: 6px;
+			width: 6px;
+			border-radius: 50%;
+			background: $color--white;
+		}
+	}
+	input {
+		&:disabled {
+			& ~ .control__indicator {
+				&:after {
+					background: $color--dark-grey;
+				}
+			}
+		}
+	}
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: $color--grey;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: $color--secondary;
+}
+.control--checkbox {
+	.control__indicator {
+		&:after {
+			left: 8px;
+			top: 4px;
+			width: 3px;
+			height: 8px;
+			border: solid $color--white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	}
+	input {
+		&:disabled {
+			& ~ .control__indicator {
+				&:after {
+					border-color: $color--dark-grey;
+				}
+			}
+		}
+	}
+}
