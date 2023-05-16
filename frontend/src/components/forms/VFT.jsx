@@ -42,12 +42,16 @@ const VFT = () => {
             alert(errors.join("\n"));
             return;
         }
+        const checkedBoxes = Array.from(document.querySelectorAll('input[name="camp"]:checked')).map(checkbox => checkbox.value);
+        console.log(checkedBoxes);
         console.log(forms);
-        store
-            .append("Sheet1", forms)
-            .then(res => {
-                console.log(res);
-            });
+        for (let i = 0; i < checkedBoxes.length; i++) {
+            store
+                .append(checkedBoxes[i], forms)
+                .then(res => {
+                    console.log(res);
+                });
+        }
     };
 
 
@@ -86,6 +90,12 @@ const VFT = () => {
                 {forms.map((form, index) => (
                     <div key={index}>
                         <h3>Child {index + 1}</h3>
+
+                        <div className="checkboxes">
+                            <input type="checkbox" value="Sheet1" name="camp" />
+                            <input type="checkbox" value="Sheet2" name="camp" />
+                            <input type="checkbox" value="three" name="camp" />
+                        </div>
                         <label>
                             Gender:
                             <br />
