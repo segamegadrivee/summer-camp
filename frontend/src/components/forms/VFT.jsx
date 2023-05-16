@@ -4,7 +4,11 @@ import { useState } from "react";
 const store = new SteinStore(process.env.REACT_APP_STEIN_KEY);
 
 const VFT = () => {
-    const [forms, setForms] = useState([{ gender: "", cuaet: "", arrivalDate: "", firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "" }]);
+    const [forms, setForms] = useState([{
+        gender: "", cuaet: "", arrivalDate: "",
+        firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "",
+        langSpoken: "", allergies: ""
+    }]);
     const handleSubmit = (event) => {
         event.preventDefault();
         const errors = [];
@@ -27,9 +31,12 @@ const VFT = () => {
             if (form.dateOfBirth === "") {
                 errors.push(`Form ${index + 1}: Date of birth is required.`);
             }
-            // if (form.gradeCompleted === "") {
-            //   errors.push(`Form ${index + 1}: Grade completed is required.`);
-            // }
+            if (form.gradeCompleted === "") {
+                errors.push(`Form ${index + 1}: Grade completed is required.`);
+            }
+            if (form.langSpoken === "") {
+                errors.push(`Form ${index + 1}: Languages Spoken is required.`);
+            }
         });
         if (errors.length > 0) {
             alert(errors.join("\n"));
@@ -42,21 +49,33 @@ const VFT = () => {
                 console.log(res);
             });
     };
+
+
     const handleAddForm = () => {
         if (forms.length < 3) {
-            setForms([...forms, { gender: "", cuaet: "", arrivalDate: "", firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "" }]);
+            setForms([...forms, {
+                gender: "", cuaet: "", arrivalDate: "",
+                firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "",
+                langSpoken: "", allergies: ""
+            }]);
         }
     };
+
+
     const handleDeleteForm = (index) => {
         const newForms = forms.filter((form, i) => i !== index);
         setForms(newForms);
     };
+
+
     const handleChange = (event, index) => {
         const { name, value } = event.target;
         const newForms = [...forms];
         newForms[index][name] = value;
         setForms(newForms);
     };
+
+
     return (
         <div className="form__container container">
 
@@ -114,6 +133,22 @@ const VFT = () => {
                             <input type="date" name="dateOfBirth" value={form.dateOfBirth} onChange={(e) => handleChange(e, index)} />
                         </label>
                         <br />
+                        <label>
+                            Child's most recent grade completed *
+                            <input type="number" name="gradeCompleted" min={1} max={11} value={form.gradeCompleted} onChange={(e) => handleChange(e, index)} />
+                        </label>
+                        <br />
+                        <label>
+                            Languages Spoken *
+                            <input type="text" name="langSpoken" value={form.langSpoken} onChange={(e) => handleChange(e, index)} />
+                        </label>
+                        <br />
+                        <label>
+                            Allergies & Dietary restrictions
+                            <input type="text" name="allergies" placeholder="Optional" value={form.allergies} onChange={(e) => handleChange(e, index)} />
+                        </label>
+                        <br />
+
                         <button type="button" onClick={() => handleDeleteForm(index)}>Delete Form</button>
                     </div>
                 ))}
