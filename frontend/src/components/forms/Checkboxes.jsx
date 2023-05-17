@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function Checkboxes() {
     const [checkboxes, setCheckboxes] = useState([
-        { id: 1, value: "Checkbox 1", isChecked: false },
-        { id: 2, value: "Checkbox 2", isChecked: false },
+        { id: 1, value: "Sheet1", isChecked: false },
+        { id: 2, value: "Sheet2", isChecked: false },
         { id: 3, value: "Checkbox 3", isChecked: false },
         { id: 4, value: "Checkbox 4", isChecked: false },
         { id: 5, value: "Checkbox 5", isChecked: false },

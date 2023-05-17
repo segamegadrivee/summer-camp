@@ -1,18 +1,26 @@
 import SteinStore from "stein-js-client";
 import { useState } from "react";
+// import Checkboxes from "./Checkboxes";
+
 
 const store = new SteinStore(process.env.REACT_APP_STEIN_KEY);
 
 const VFT = () => {
+
+
     const [forms, setForms] = useState([{
         gender: "", cuaet: "", arrivalDate: "",
         firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "",
         langSpoken: "", allergies: ""
     }]);
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const errors = [];
         forms.forEach((form, index) => {
+
+
             if (form.gender === "") {
                 errors.push(`Form ${index + 1}: Gender is required.`);
             }
@@ -38,22 +46,38 @@ const VFT = () => {
                 errors.push(`Form ${index + 1}: Languages Spoken is required.`);
             }
         });
+
         if (errors.length > 0) {
             alert(errors.join("\n"));
             return;
         }
+
         const checkedBoxes = Array.from(document.querySelectorAll('input[name="camp"]:checked')).map(checkbox => checkbox.value);
         console.log(checkedBoxes);
         console.log(forms);
         for (let i = 0; i < checkedBoxes.length; i++) {
-            store
-                .append(checkedBoxes[i], forms)
-                .then(res => {
-                    console.log(res);
-                });
-        }
-    };
+            store.read(checkedBoxes[i]).then(data => {
+                console.log("READED", data);
+                console.log(data.length);
+                if (data.length >= 34) {
+                    console.log("MAX FORMS");
+                    alert("Sorry, form closed")
+                    return;
+                }
+                else {
+                    store
+                        .append(checkedBoxes[i], forms)
+                        .then(res => {
+                            console.log(res);
+                        });
+                }
+            });
 
+
+        }
+
+
+    };
 
     const handleAddForm = () => {
         if (forms.length < 3) {
@@ -85,17 +109,18 @@ const VFT = () => {
 
             <h2 className="form__title">Registration form</h2>
 
+            <div className="checkboxes">
+                <input type="checkbox" value="Sheet1" name="camp" />
+                <input type="checkbox" value="Sheet2" name="camp" />
+                <input type="checkbox" value="Sheet3" name="camp" />
+            </div>
 
             <form onSubmit={handleSubmit} >
                 {forms.map((form, index) => (
                     <div key={index}>
                         <h3>Child {index + 1}</h3>
 
-                        <div className="checkboxes">
-                            <input type="checkbox" value="Sheet1" name="camp" />
-                            <input type="checkbox" value="Sheet2" name="camp" />
-                            <input type="checkbox" value="three" name="camp" />
-                        </div>
+
                         <label>
                             Gender:
                             <br />
