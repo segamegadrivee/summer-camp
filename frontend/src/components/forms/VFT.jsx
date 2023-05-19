@@ -1,3 +1,4 @@
+
 import SteinStore from "stein-js-client";
 import { useState } from "react";
 // import Checkboxes from "./Checkboxes";
@@ -14,13 +15,16 @@ const VFT = () => {
         langSpoken: "", allergies: ""
     }]);
 
+    const [parentForm, setParentForm] = useState({
+        parentFirstName: "", parentSecondName: "", parentMail: ""
+    });
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         const errors = [];
+
         forms.forEach((form, index) => {
-
-
             if (form.gender === "") {
                 errors.push(`Form ${index + 1}: Gender is required.`);
             }
@@ -43,39 +47,47 @@ const VFT = () => {
                 errors.push(`Form ${index + 1}: Grade completed is required.`);
             }
             if (form.langSpoken === "") {
-                errors.push(`Form ${index + 1}: Languages Spoken is required.`);
+                errors.push(`Child ${index + 1}: Languages Spoken is required.`);
             }
+
+
         });
+
 
         if (errors.length > 0) {
             alert(errors.join("\n"));
             return;
         }
+        const formsWithParentForm = forms.map(form =>
+            Object.assign({}, form, parentForm)
+        );
+
+        console.log("i AM HERE", formsWithParentForm);
+
 
         const checkedBoxes = Array.from(document.querySelectorAll('input[name="camp"]:checked')).map(checkbox => checkbox.value);
         console.log(checkedBoxes);
         console.log(forms);
+        console.log(parentForm);
         for (let i = 0; i < checkedBoxes.length; i++) {
             store.read(checkedBoxes[i]).then(data => {
                 console.log("READED", data);
                 console.log(data.length);
                 if (data.length >= 34) {
                     console.log("MAX FORMS");
-                    alert("Sorry, form closed")
+                    alert(`Sorry, form ${checkedBoxes[i]} closed`)
                     return;
                 }
                 else {
                     store
-                        .append(checkedBoxes[i], forms)
+                        .append(checkedBoxes[i], formsWithParentForm)
                         .then(res => {
                             console.log(res);
                         });
                 }
             });
 
-
         }
-
 
     };
 
@@ -84,7 +96,7 @@ const VFT = () => {
             setForms([...forms, {
                 gender: "", cuaet: "", arrivalDate: "",
                 firstName: "", lastName: "", dateOfBirth: "", gradeCompleted: "",
-                langSpoken: "", allergies: ""
+                langSpoken: "", allergies: "",
             }]);
         }
     };
@@ -103,6 +115,11 @@ const VFT = () => {
         setForms(newForms);
     };
 
+    const handleParentChange = (e) => {
+        setParentForm({ ...parentForm, [e.target.name]: e.target.value });
+        console.log(parentForm);
+    };
+
 
     return (
         <div className="form__container container">
@@ -115,11 +132,23 @@ const VFT = () => {
                 <input type="checkbox" value="Sheet3" name="camp" />
             </div>
 
+
+
             <form onSubmit={handleSubmit} >
+
+                <div className="parentinfo">
+                    <h2>Parents</h2>
+                    <input type="text" name="parentFirstName" onChange={handleParentChange} />
+                    <br />
+                    <input type="text" name="parentSecondName" onChange={handleParentChange} />
+                    <br />
+                    <input type="mail" name="parentMail" onChange={handleParentChange} />
+                </div>
+
+
                 {forms.map((form, index) => (
                     <div key={index}>
                         <h3>Child {index + 1}</h3>
-
 
                         <label>
                             Gender:
@@ -188,6 +217,11 @@ const VFT = () => {
                     </div>
                 ))}
                 <button type="button" onClick={handleAddForm}>Add Form</button>
+
+
+
+
+
                 <button type="submit">Submit</button>
             </form>
         </div>
