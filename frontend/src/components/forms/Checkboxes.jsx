@@ -2,17 +2,17 @@ import React, { useState } from "react";
 
 function Checkboxes() {
     const [checkboxes, setCheckboxes] = useState([
-        { id: 1, value: "Sheet1", isChecked: false },
-        { id: 2, value: "Sheet2", isChecked: false },
-        { id: 3, value: "Checkbox 3", isChecked: false },
-        { id: 4, value: "Checkbox 4", isChecked: false },
-        { id: 5, value: "Checkbox 5", isChecked: false },
+        { id: 1, value: "03 July - 07 July", isChecked: false },
+        { id: 2, value: "17 July — 21 July", isChecked: false },
+        { id: 3, value: "24 July — 28 July", isChecked: false },
+        { id: 4, value: "14 August — 18 August", isChecked: false },
+        { id: 5, value: "21 August — 25 August", isChecked: false },
     ]);
 
     const handleCheckboxChange = (event) => {
-        const { name } = event.target;
+        const { value } = event.target;
         const updatedCheckboxes = checkboxes.map((checkbox) =>
-            checkbox.value === name
+            checkbox.value === value
                 ? { ...checkbox, isChecked: !checkbox.isChecked }
                 : checkbox
         );
@@ -24,14 +24,14 @@ function Checkboxes() {
     };
 
     return (
-        <div>
-            <h1>Checkboxes</h1>
+        <div className="childreninfo__checkboxes">
+
             {checkboxes.map((checkbox) => (
-                <div key={checkbox.id}>
-                    <label htmlFor={checkbox.value}>{checkbox.value}</label>
+                <div className="childreninfo__checkboxes-item" key={checkbox.id}>
                     <input
                         type="checkbox"
-                        name={checkbox.value}
+                        value={checkbox.value}
+                        name="camp"
                         checked={checkbox.isChecked}
                         onChange={handleCheckboxChange}
                         disabled={
@@ -40,6 +40,7 @@ function Checkboxes() {
                             (getCheckedCount() === 2 && checkbox.isChecked === false)
                         }
                     />
+                    <label htmlFor={checkbox.value}>{checkbox.value}</label>
                 </div>
             ))}
         </div>
