@@ -8,6 +8,8 @@ import Booking from "./components/Booking";
 import Contacts from "./components/Contacts";
 import ForParents from "./components/ForParents";
 import VFT from "./components/forms/VFT";
+import YL from "./components/forms/YL";
+import About from "./components/About";
 
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/camps" element={<Booking />} />
                 <Route path="/camps/vacation-fun-tabir" element={<VFT />} />
+                <Route path="/camps/youth-leadership" element={<YL />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contacts />} />
                 <Route path="/parents" element={<ForParents />} />
             </Routes>

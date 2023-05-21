@@ -4,6 +4,7 @@ import click from '../assets/Finger-Click.svg';
 import like from '../assets/Thumb-Up.svg';
 import hero from '../assets/main-picture.png';
 import hero2 from '../assets/main-picture2.png';
+import volunteer from '../assets/volunte.svg';
 import sign from '../assets/sign-exp.svg';
 import experience from '../assets/experience.png';
 import slider1 from '../assets/slider/1264.png';
@@ -12,6 +13,11 @@ import slider3 from '../assets/slider/937.png';
 import slider4 from '../assets/slider/2022.png';
 import slider5 from '../assets/slider/938.png';
 import slider6 from '../assets/slider/940.png';
+import spons1 from '../assets/sponsors/1spons.png';
+import spons2 from '../assets/sponsors/2spons.png';
+import spons3 from '../assets/sponsors/3spons.png';
+import spons4 from '../assets/sponsors/4spons.png';
+import spons5 from '../assets/sponsors/5spons.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Link } from 'react-router-dom';
@@ -88,7 +94,7 @@ let HomePage = () => {
                 <div className="experience__container container">
                     <h2 className='experience__title'>Experience the joy of summer with friends and faith</h2>
                     <div className='experience__main'>
-                        {/* <img className='experience__img' src={experience} alt="exp-img" /> */}
+                        <img className='experience__img' src={experience} alt="exp-img" />
                         <div className="experience__text">
                             <p className='experience__text-header'>At Summer Camp, children aged 7 years and above will have an exciting and
                                 unforgettable summer experience filled with adventure, learning and make friends</p>
@@ -189,7 +195,21 @@ let HomePage = () => {
                             <p>To learn more about volunteering at our camp and to apply, please contact us via email at <a href="mailto:camp@abvmcalgary.com">camp@abvmcalgary.com</a> </p>
                         </div>
 
+                        <img className='volunteer__img' src={volunteer} alt="img" />
+
                     </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 style={{ textAlign: "center" }}>Our sponsors</h2>
+                <div className="sponsor__container container">
+
+                    <div className='sponsor__img'> <img src={spons1} alt="sponsor" /></div>
+                    <div className='sponsor__img'> <img src={spons2} alt="sponsor" /></div>
+                    <div className='sponsor__img'><img src={spons3} alt="sponsor" /></div>
+                    <div className='sponsor__img'> <img src={spons4} alt="sponsor" /></div>
+                    <div className='sponsor__img'> <img src={spons5} alt="sponsor" /></div>
                 </div>
             </section>
         </div >

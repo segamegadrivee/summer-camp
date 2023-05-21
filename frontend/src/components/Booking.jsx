@@ -59,7 +59,7 @@ let Booking = () => {
 
                         </div>
 
-                        <button className="booking__button common__button">Book</button>
+                        <Link to={'/camps/youth-leadership'}><button className="booking__button common__button">Book</button></Link>
                     </div>
                 </div>
 

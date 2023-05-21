@@ -176,6 +176,9 @@
     &__img{
         position: absolute;
         left: -12%;
+        @media screen and (max-width: 1499px) {
+           display: none;
+        }
     }
 
     &__container{
@@ -280,6 +283,7 @@
     }
 
     &__title{
+        padding-top: 20px;
         font-family: 'Readex Pro';
         font-style: normal;
         font-weight: 500;
@@ -297,10 +301,7 @@
 }
 
 .photo {
-    background-image: url('../../assets/photo-bg.svg');
-    background-repeat: no-repeat;
-    background-size: cc;
-    
+    background-color: #DBEBF8;
 }
 
 
@@ -308,12 +309,17 @@
     &__container{
         margin-top: 120px;
         margin-bottom: 120px;
+        position: relative;
     }
     
     &__content{
         display: flex;
         justify-content: flex-start;
+        @media screen and (max-width: 1409px) {
+            justify-content:center;
+        }
     }
+    
 
 
     &__title{
@@ -350,6 +356,34 @@
             line-height: 30px;
             color: #2F3336;
 
+        }
+
+    }
+
+    &__img {
+        position: absolute;
+        right:0;
+        bottom: -100px;
+        @media screen and (max-width: 1409px) {
+            display: none;
+        }
+    }
+}
+
+
+.sponsor{
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    &__img{
+        img {
+            width: 100%;
         }
     }
 }

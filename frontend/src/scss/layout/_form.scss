@@ -184,7 +184,7 @@
 
     &__checkboxes{
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         gap: 40px;
         font-family: 'Readex Pro';
@@ -244,6 +244,10 @@
         gap: 40px;
         margin-bottom: 40px;
     }
+
+   
+ 
+
 
     &__main-item{
         display: flex;
@@ -310,6 +314,16 @@
             flex-direction: row;
             align-items: flex-start;
             gap: 48px;
+
+            label {
+                font-family: 'Readex Pro';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+        
+            }
         }
     }
 
@@ -326,8 +340,67 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
-            text-align: center;
             color: #686F7A;
         }
+
+    
+        &-radio{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 48px;
+            
+            label {
+                font-family: 'Readex Pro';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+            }
+        }
     }
+}
+
+.childreninfo__cuaet-date{
+        animation-name: opacityanim;
+        animation-duration: 1s;
+        border: 2px solid #4482E9;
+        border-radius: 20px;
+        background-color: transparent;
+        padding: 16px 40px;
+        width: 100%;
+        min-width: 386px;
+        box-sizing: border-box;
+        
+        transition: 0.3s ease-in-out;
+        font-family: 'Readex Pro';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+      
+          letter-spacing: 0.01em;
+          color: #2F3336;
+      
+        &:focus{
+          outline: none;
+          box-shadow: rgba(68, 130, 233, 0.4) 0px 8px 24px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            min-width: 312px;
+         }
+
+
+    p {
+        font-family: 'Readex Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #686F7A;
+    }
+
+  
 }

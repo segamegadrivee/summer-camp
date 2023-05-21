@@ -157,13 +157,13 @@ const VFT = () => {
 
                         <div className="parentinfo__main-item">
                             <label htmlFor="parentPhone">Phone number *</label>
-                            <input type="tel" name="parentPhone" placeholder="250-555-0199" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={handleParentChange} required />
+                            <input type="tel" name="parentPhone" maxLength={15} onChange={handleParentChange} required />
 
                         </div>
 
                         <div className="parentinfo__main-item">
                             <label htmlFor="parentPhone2">Additional phone number</label>
-                            <input type="tel" name="parentPhone2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder=" Optional" onChange={handleParentChange} />
+                            <input type="tel" name="parentPhone2" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder=" Optional" onChange={handleParentChange} />
                         </div>
 
                     </div>
@@ -240,8 +240,10 @@ const VFT = () => {
                                 <p>Arrived according to the program CUAET:</p>
 
                                 <div className="childreninfo__cuaet-radio">
-                                    <input type="radio" name="cuaet" value="YES" checked={form.cuaet === "YES"} onChange={(e) => handleChange(e, index)} />
-                                    YES
+                                    <label htmlFor="cuaet">
+                                        <input type="radio" name="cuaet" value="YES" checked={form.cuaet === "YES"} onChange={(e) => handleChange(e, index)} />
+                                        Yes
+                                    </label>
 
                                     <label>
                                         <input type="radio" name="cuaet" value="NO" checked={form.cuaet === "NO"} onChange={(e) => {
@@ -250,17 +252,16 @@ const VFT = () => {
                                                 form.arrivalDate = "";
                                             }
                                         }} />
-                                        NO
+                                        No
                                     </label>
                                 </div>
                                 {form.cuaet === "YES" && (
-                                    <>
-                                        <br />
+                                    <div className="childreninfo__arrival">
                                         <label>
-                                            Arrival Date:
-                                            <input type="date" name="arrivalDate" value={form.arrivalDate} onChange={(e) => handleChange(e, index)} />
+                                            <p>Arrival Date:</p>
+                                            <input type="date" className='childreninfo__cuaet-date' name="arrivalDate" value={form.arrivalDate} onChange={(e) => handleChange(e, index)} />
                                         </label>
-                                    </>
+                                    </div>
                                 )}
                             </div>
 
@@ -277,7 +278,7 @@ const VFT = () => {
 
                                 <div className="childreninfo__main-item">
                                     <p>Date of Birth:</p>
-                                    <input type="date" name="dateOfBirth" value={form.dateOfBirth} onChange={(e) => handleChange(e, index)} />
+                                    <input type="date" name="dateOfBirth" min="2000-01-01" max="2023-05-21" value={form.dateOfBirth} onChange={(e) => handleChange(e, index)} />
                                 </div>
 
                                 <div className="childreninfo__main-item">
@@ -302,6 +303,12 @@ const VFT = () => {
                     {/* <button type="button" onClick={handleAddForm}>Add Form</button> */}
 
                     <img src={addbtn} onClick={handleAddForm} />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    {/* that's what i call procoding */}
+
 
                     <button className='common__button' type="submit">Submit</button>
                 </div>
