@@ -1,6 +1,6 @@
 import logo from '../assets/Logo1.svg';
 import burger from '../assets/burger-menu.svg';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -18,7 +18,7 @@ const Header = () => {
             <div className={`${hamburgerOpen ? 'blur' : ''}`} onClick={() => setHamburgerOpen(false)}></div>
             <div className="header__container container">
 
-                <img className='header__logo' src={logo} alt="logo" />
+                <Link to="/"><img className='header__logo' src={logo} alt="logo" /></Link>
 
                 <nav>
                     <ul className='header__nav'>

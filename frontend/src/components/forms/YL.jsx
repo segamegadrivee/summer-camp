@@ -3,6 +3,7 @@ import addbtn from '../../assets/add_btn.svg';
 import SteinStore from "stein-js-client";
 import { useState } from "react";
 import Checkboxes from "./Checkboxes";
+import { useNavigate } from 'react-router-dom';
 
 
 const store = new SteinStore(process.env.REACT_APP_STEIN_KEY2);
@@ -21,6 +22,8 @@ const YL = () => {
         parentSupport: "", parentPhone: "", parentPhone2: "", parentAddress: "",
         parentSupportDetails: ""
     });
+
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -61,6 +64,8 @@ const YL = () => {
             alert(errors.join("\n"));
             return;
         }
+
+
         const formsWithParentForm = forms.map(form =>
             Object.assign({}, form, parentForm)
         );
@@ -82,6 +87,7 @@ const YL = () => {
                     return;
                 }
                 else {
+
                     store
                         .append(checkedBoxes[i], formsWithParentForm)
                         .then(res => {
@@ -92,6 +98,9 @@ const YL = () => {
             });
 
         }
+
+
+        navigate('/thankyou');
 
     };
 
@@ -239,7 +248,6 @@ const YL = () => {
                                 <div className="childreninfo__gender-radio">
                                     <label htmlFor="gender"><input type="radio" name="gender" value="Boy" checked={form.gender === "Boy"} onChange={(e) => handleChange(e, index)} /> Boy</label>
                                     <label htmlFor="gender"><input type="radio" name="gender" value="Girl" checked={form.gender === "Girl"} onChange={(e) => handleChange(e, index)} /> Girl</label>
-
                                 </div>
 
                             </div>

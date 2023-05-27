@@ -59,7 +59,8 @@ let Booking = () => {
 
                         </div>
 
-                        <Link to={'/camps/youth-leadership'}><button className="booking__button common__button">Book</button></Link>
+                        {/* <Link to={'/camps/youth-leadership'}><button className="booking__button common__button">Book</button></Link> */}
+                        <button className="booking__button common__button--disabled">Book</button>
                     </div>
                 </div>
 

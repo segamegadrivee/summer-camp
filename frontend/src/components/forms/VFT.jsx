@@ -3,6 +3,8 @@ import addbtn from '../../assets/add_btn.svg';
 import SteinStore from "stein-js-client";
 import { useState } from "react";
 import Checkboxes from "./Checkboxes";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const store = new SteinStore(process.env.REACT_APP_STEIN_KEY);
@@ -21,6 +23,8 @@ const VFT = () => {
         parentSupport: "", parentPhone: "", parentPhone2: "", parentAddress: "",
         parentSupportDetails: ""
     });
+
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -76,7 +80,7 @@ const VFT = () => {
             store.read(checkedBoxes[i]).then(data => {
                 console.log("READED", data);
                 console.log(data.length);
-                if (data.length >= 34) {
+                if (data.length >= 51) {
                     console.log("MAX FORMS");
                     alert(`Sorry, form ${checkedBoxes[i]} closed`)
                     return;
@@ -87,12 +91,15 @@ const VFT = () => {
                         .then(res => {
                             console.log(res);
                             alert(`Data to form ${checkedBoxes[i]} added`)
+
                         });
                 }
             });
 
         }
 
+
+        navigate('/thankyou');
     };
 
     const handleAddForm = () => {
@@ -308,6 +315,11 @@ const VFT = () => {
                     <br />
                     <br />
                     {/* that's what i call procoding */}
+                    <p>Don't click submit multiple times</p>
+                    <br />
+                    <p>It takes a few seconds to send form.</p>
+                    <br />
+                    <br />
 
 
                     <button className='common__button' type="submit">Submit</button>

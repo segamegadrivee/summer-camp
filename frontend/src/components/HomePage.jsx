@@ -4,7 +4,7 @@ import click from '../assets/Finger-Click.svg';
 import like from '../assets/Thumb-Up.svg';
 import hero from '../assets/main-picture.png';
 import hero2 from '../assets/main-picture2.png';
-import volunteer from '../assets/volunte.svg';
+import volunteer from '../assets/volunte.png';
 import sign from '../assets/sign-exp.svg';
 import experience from '../assets/experience.png';
 import slider1 from '../assets/slider/1264.png';
